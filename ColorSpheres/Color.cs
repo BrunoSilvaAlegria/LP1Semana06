@@ -27,6 +27,7 @@ namespace ColorSpheres
             this._blue = blue;
             this._alpha = alpha;
         }
+
         /// <summary>
         /// Constructor that accepts values for the color, but not transparency
         /// because it is already set to 255.
@@ -40,6 +41,17 @@ namespace ColorSpheres
             this._green = green;
             this._blue = blue;
             this._alpha = 255;
+        }
+
+        //Getters methods for values 
+        public byte GetRed() => _red; //Gets red value
+        public byte GetGreen() => _green; //Gets green value
+        public byte GetBlue() => _blue; //Gets blue value
+        public byte GetAlpha() => _alpha; //Gets transparency value
+        public byte GetGrey() //Gets grey value
+        {
+            byte grey = (_red + _green + _blue) / 3;
+            if (grey > 0 && grey < 255) return grey;
         }
     }
 }
