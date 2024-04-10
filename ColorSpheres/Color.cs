@@ -27,5 +27,19 @@ namespace ColorSpheres
             this._blue = blue;
             this._alpha = alpha;
         }
+        /// <summary>
+        /// Constructor that accepts values for the color, but not transparency
+        /// because it is already set to 255.
+        /// </summary>
+        /// <param name="red">Value of red</param>
+        /// <param name="green">Value of green</param>
+        /// <param name="blue">Value of blue </param>
+        public Color (byte red, byte green, byte blue)
+        {
+            this._red = red;
+            this._green = green;
+            this._blue = blue;
+            this._alpha = 255;
+        }
     }
 }
