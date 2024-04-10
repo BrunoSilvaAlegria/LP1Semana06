@@ -22,7 +22,10 @@ namespace ColorSpheres
         /// <param name="alpha">Value of transparency</param>
         public Color (byte red, byte green, byte blue, byte alpha)
         {
-            
+            this._red = red;
+            this._green = green;
+            this._blue = blue;
+            this._alpha = alpha;
         }
     }
 }
