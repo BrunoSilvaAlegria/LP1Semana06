@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 
 namespace ColorSpheres
 {
+    /// <summary>
+    /// This class defines the color of a sphere by combining the RGB values and
+    /// its transparency, which is Alpha.
+    /// </summary>
     public class Color
     {
         //Initialize the variables (with values from 0 to 255)
