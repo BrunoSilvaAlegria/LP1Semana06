@@ -47,7 +47,7 @@ namespace ColorSpheres
             this._alpha = 255;
         }
 
-        //Getters methods for values 
+        //Getters methods for values. 
         public byte GetRed() => _red; //Gets red value
         public byte GetGreen() => _green; //Gets green value
         public byte GetBlue() => _blue; //Gets blue value
@@ -57,11 +57,13 @@ namespace ColorSpheres
         //that its value is within range of the RGB color values.
         public byte GetGrey() 
         {
-            byte grey = (_red + _green + _blue) / 3;
-            if (grey > 0 && grey < 255)
-            {
-                return grey;
-            }
+            //Calculate the average of the RGB values.
+            int sum = _red + _green + _blue;
+            byte grey = (byte)(sum / 3);
+            
+            //The result is guaranteed to be within the byte range.
+            return grey; 
         }
+
     }
 }
