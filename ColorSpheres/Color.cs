@@ -39,7 +39,7 @@ namespace ColorSpheres
         /// <param name="red">Value of red</param>
         /// <param name="green">Value of green</param>
         /// <param name="blue">Value of blue </param>
-        private Color (byte red, byte green, byte blue)
+        public Color (byte red, byte green, byte blue)
         {
             this._red = red;
             this._green = green;
