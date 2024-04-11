@@ -39,7 +39,7 @@ namespace ColorSpheres
         /// <param name="red">Value of red</param>
         /// <param name="green">Value of green</param>
         /// <param name="blue">Value of blue </param>
-        public Color (byte red, byte green, byte blue)
+        private Color (byte red, byte green, byte blue)
         {
             this._red = red;
             this._green = green;
@@ -52,10 +52,16 @@ namespace ColorSpheres
         public byte GetGreen() => _green; //Gets green value
         public byte GetBlue() => _blue; //Gets blue value
         public byte GetAlpha() => _alpha; //Gets transparency value
-        public byte GetGrey() //Gets grey value
+        
+        //Gets grey value, which is the average of RGB values, and guarantees
+        //that its value is within range of the RGB color values.
+        public byte GetGrey() 
         {
             byte grey = (_red + _green + _blue) / 3;
-            if (grey > 0 && grey < 255) return grey;
+            if (grey > 0 && grey < 255)
+            {
+                return grey;
+            }
         }
     }
 }
