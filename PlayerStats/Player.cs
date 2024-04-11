@@ -12,8 +12,8 @@ namespace PlayerStats
     {
         //Initialize the variables
         private float highScore;
-        private int playedGames;
-        private int wonGames;
+        private readonly int playedGames;
+        private readonly int wonGames;
 
         /// <summary>
         /// Gets the original highscore and replaces it with the most recent
@@ -32,5 +32,9 @@ namespace PlayerStats
                 }
             }
         }
+
+        public string Name { get; }
+
+        public float WinRate => (wonGames/playedGames) * 100;
     }
 }
