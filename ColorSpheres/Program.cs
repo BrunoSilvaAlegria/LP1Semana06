@@ -2,6 +2,10 @@
 
 namespace ColorSpheres
 {
+    /// <summary>
+    /// Prints out the spheres and their color and transparency by using the
+    /// Sphere and Color classes, respectively.
+    /// </summary>
     class Program
     {
         public static void Main(string[] args)

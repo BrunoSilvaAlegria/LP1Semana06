@@ -12,10 +12,10 @@ namespace ColorSpheres
     public class Color
     {
         //Initialize the variables (with values from 0 to 255).
-        private byte _red;
-        private byte _green;
-        private byte _blue;
-        private byte _alpha;
+        private readonly byte _red;
+        private readonly byte _green;
+        private readonly byte _blue;
+        private readonly byte _alpha;
         
         /// <summary>
         /// This is a constructor that accepts values for the color 

@@ -11,9 +11,13 @@ namespace ColorSpheres
     /// </summary>
     public class Sphere
     {
-        private Color _color; //Color of the sphere.
-        private float _radius; //Radius of the sphere.
-        private int _n; //Number of times the sphere is thrown.
+        private readonly Color _color; //Color of the sphere. Can be readonly
+        
+        //Radius of the sphere. Cannot be readonly to do Pop() changing it.
+        private float _radius; 
+        
+        //Number of times the sphere is thrown. 
+        private int _n; //Cannot be readonly to do Throw() changing it.
     
         /// <summary>
         /// Constructor that accepts values for the color (processed by the
