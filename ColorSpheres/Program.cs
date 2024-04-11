@@ -36,8 +36,8 @@ namespace ColorSpheres
             sphere_red.Throw(); //1
             sphere_color1.Throw(); //1
 
-            sphere_green.Pop(); //Pops the red sphere
-            sphere_blue.Pop(); //Pops the green sphere
+            sphere_green.Pop(); //Pops the green sphere
+            sphere_blue.Pop(); //Pops the blue sphere
 
             //Throwing the green and color 1 spheres five more times
             sphere_green.Throw(); //2
@@ -62,8 +62,8 @@ namespace ColorSpheres
             Console.WriteLine($"Red sphere:{sphere_red.GetTimesThrown()}");
             Console.WriteLine($"Color1 sphere:{sphere_color1.GetTimesThrown()}");
 
-            //No more actions should be done by the popped spheres do to Pop()
-            //making it unusable
+            //No more actions should be done by the popped spheres will be 
+            //counted do to Pop(), making them unusable
             
 
             //Results should shown:
