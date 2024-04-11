@@ -29,10 +29,27 @@ namespace ColorSpheres
         }
         
         /// <summary>
-        /// "Pops" the sphere by putting its radius to 0
+        /// "Pops" the sphere by putting its radius to 0.
         /// </summary>
         private Pop()
-        { this._radius = 0; }
+        { 
+            radius = 0; 
+        }
+
+        /// <summary>
+        /// Increments by one the number of throws, but only if the sphere isn't
+        /// pierced, which means that it has a radius bigger than 0.
+        /// </summary>
+        private Throw()
+        {
+            if (radius > 0)
+            {
+                _n++;
+            }
+        }
+
+        //Getter method that returns the number of times the sphere is thrown
+        public int GetTimesThrown() => _n; 
 
     }
 }
