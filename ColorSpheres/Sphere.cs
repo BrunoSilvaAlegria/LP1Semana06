@@ -11,9 +11,9 @@ namespace ColorSpheres
     /// </summary>
     public class Sphere
     {
-        private Color _color; //Color of the sphere
-        private float _radius; //Radius of the sphere
-        private int _n; //Number of times the sphere is thrown
+        private Color _color; //Color of the sphere.
+        private float _radius; //Radius of the sphere.
+        private int _n; //Number of times the sphere is thrown.
     
         /// <summary>
         /// Constructor that accepts values for the color (processed by the
