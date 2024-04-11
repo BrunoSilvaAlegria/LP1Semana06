@@ -18,7 +18,8 @@ namespace ColorSpheres
         private byte _alpha;
         
         /// <summary>
-        /// Constructor that accepts values for the color and transparency.
+        /// This is a constructor that accepts values for the color 
+        /// and transparency.
         /// </summary>
         /// <param name="red">Value of red</param>
         /// <param name="green">Value of green</param>
@@ -33,7 +34,7 @@ namespace ColorSpheres
         }
 
         /// <summary>
-        /// Constructor that accepts values for the color, but not transparency
+        /// Constructor that accepts values for color, but not transparency
         /// because it is already set to 255.
         /// </summary>
         /// <param name="red">Value of red</param>
