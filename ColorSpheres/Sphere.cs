@@ -31,24 +31,28 @@ namespace ColorSpheres
         /// <summary>
         /// "Pops" the sphere by putting its radius to 0.
         /// </summary>
-        private Pop()
+        public void Pop()
         { 
-            radius = 0; 
+            _radius = 0; 
         }
 
         /// <summary>
         /// Increments by one the number of throws, but only if the sphere isn't
         /// pierced, which means that it has a radius bigger than 0.
         /// </summary>
-        private Throw()
+        public void Throw()
         {
-            if (radius > 0)
+            if (_radius > 0)
             {
                 _n++;
             }
+            else
+            {   
+                Console.WriteLine("Sphere was popped");
+            }
         }
 
-        //Getter method that returns the number of times the sphere is thrown
+        //Getter method that returns the number of times the sphere was thrown
         public int GetTimesThrown() => _n; 
 
     }
