@@ -11,7 +11,7 @@ namespace ColorSpheres
     /// </summary>
     public class Color
     {
-        //Initialize the variables (with values from 0 to 255)
+        //Initialize the variables (with values from 0 to 255).
         private byte _red;
         private byte _green;
         private byte _blue;
