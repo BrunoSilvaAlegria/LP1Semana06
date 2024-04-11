@@ -18,6 +18,9 @@ namespace ColorSpheres
         
         //Number of times the sphere is thrown. 
         private int _n; //Cannot be readonly to do Throw() changing it.
+
+        //A constant that sets the default number of throws to 0.
+        private const int _nDef = 0;
     
         /// <summary>
         /// Constructor that accepts values for the color (processed by the
@@ -29,7 +32,7 @@ namespace ColorSpheres
         {
             this._color = color;
             this._radius = radius;
-            this._n = 0; //Defines the number of times to 0
+            this._n = _nDef; //Defines the number of times to 0.
         }
         
         /// <summary>

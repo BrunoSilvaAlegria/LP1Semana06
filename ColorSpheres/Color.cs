@@ -16,6 +16,9 @@ namespace ColorSpheres
         private readonly byte _green;
         private readonly byte _blue;
         private readonly byte _alpha;
+
+        //A constant that sets the default alpha to 255.
+        private const byte _alphaDef = 255; 
         
         /// <summary>
         /// This is a constructor that accepts values for the color 
@@ -45,7 +48,7 @@ namespace ColorSpheres
             this._red = red;
             this._green = green;
             this._blue = blue;
-            this._alpha = 255;
+            this._alpha = _alphaDef;
         }
 
         //Getters methods for values. 
