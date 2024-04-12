@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 namespace PlayerStats
 {
     /// <summary>
-    /// 
+    /// This class receives a player's name and associates to it its highest
+    /// score (highScore), played games (playedGames) and won games (wonGames),
+    /// as well as its win rate (winRate).
     /// </summary>
     public class Player
     {
@@ -20,7 +22,7 @@ namespace PlayerStats
         /// </summary>
         public float HighScore
         {
-            get => highScore;
+            get => highScore; //Gets the initial high score
 
             set
             {
@@ -42,11 +44,11 @@ namespace PlayerStats
         {
             get
             {
-                float winRate = 0;
+                float winRate = 0; //Support variable
 
-                if (playedGames == 0)
+                if (playedGames == 0) //If the player hasn't played any games
                 {
-                    winRate = 0;
+                    winRate = 0; 
                 }
                 else
                 {   //Gets the percentage of (wonGames / playedGames)
@@ -57,7 +59,10 @@ namespace PlayerStats
         } 
 
         /// <summary>
-        /// Increments 
+        /// Increments the number of played games of a player each time that
+        /// player enters its name.
+        /// Increments the number of won games of a player each time that
+        /// player has the winning condition, which is win == true.
         /// </summary>
         /// <param name="win">Detects if the player won the game or not</param>
         public void PlayGame(bool win)
