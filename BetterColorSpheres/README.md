@@ -21,4 +21,14 @@
                   + Pop(): float
                   + Throw(): int
             }
+            class Program {
+                  green: Color
+                  sphere_green: Sphere
+                  blue: Color
+                  sphere_blue: Sphere
+                  red: Color
+                  sphere_red: Sphere
+                  color1: Color
+                  sphere_color1: Sphere
+            }
 ```
