@@ -1,10 +1,9 @@
-```Mermaid
-      ClassDiagram
-            class Color {
-                 - _red: byte 
-                 - _green: byte 
-                 - _blue: byte 
-                 - _alpha: byte 
+classDiagram
+      class Color {
+                 - _red: byte
+                 -_green: byte
+                 - _blue: byte
+                 -_alpha: byte
                  - _alphaDef: byte
                  + GetRed: byte
                  + GetGreen: byte
@@ -13,9 +12,9 @@
                  + GetGrey: byte
             }
             class Sphere {
-                  - _color: Color
+                  -_color: Color
                   -_radius: float
-                  - _n: int
+                  -_n: int
                   - _nDef: int
                   + GetTimesThrown
                   + Pop(): float
@@ -32,7 +31,5 @@
                   sphere_color1: Sphere
             }
 
-            Program *-- Color
-            Program *-- Sphere
-
-```
+            Program --> Color
+            Program --> Sphere      
