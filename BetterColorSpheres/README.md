@@ -31,4 +31,8 @@
                   color1: Color
                   sphere_color1: Sphere
             }
+
+            Program *-- Color
+            Program *-- Sphere
+
 ```
