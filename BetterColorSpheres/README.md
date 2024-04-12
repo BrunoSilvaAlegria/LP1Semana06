@@ -35,6 +35,8 @@
             sphere_color1: Sphere
       }
 
-      Program ..|> Color
-      Program ..|> Sphere
+      Color --|> Program
+      Sphere --|> Program
+      Sphere ..> Color
+
 ```
