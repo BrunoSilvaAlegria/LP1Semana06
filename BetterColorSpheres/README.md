@@ -1,3 +1,4 @@
+``` Mermaid
 classDiagram
       class Color {
                  - _red: byte
@@ -32,4 +33,5 @@ classDiagram
             }
 
             Program --> Color
-            Program --> Sphere      
+            Program --> Sphere
+```
