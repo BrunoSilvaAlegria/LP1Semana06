@@ -12,9 +12,8 @@ namespace PlayerStats
     {
         //Initialize the variables
         private float highScore;
-        private int playedGames;
-        private int wonGames;
-
+        private int playedGames, wonGames;
+        
         /// <summary>
         /// Gets the original highscore and replaces it with the most recent
         /// highscore if it is bigger than the current one.
@@ -36,7 +35,7 @@ namespace PlayerStats
         public string Name { get; } //Gets the name of the player
 
         //Gets the percentage of games won by that player
-        public float WinRate => (wonGames/playedGames) * 100; 
+        public float WinRate => ((float)wonGames/playedGames) * 100; 
 
         /// <summary>
         /// Increments 
@@ -59,9 +58,12 @@ namespace PlayerStats
         /// the start of the game for a specific player.
         /// </summary>
         /// <param name="name">Receives the name of the player</param>
-        public void GetName(string name)
+        public Player(string name) //Previously GetName
         {
-            //Sets all variables to 0 to "start" the game for a specific player
+            //Sets the player's name
+            Name = name;
+            
+            //Sets numeric variables to 0 to "start" the game for a player
             highScore = 0;
             playedGames = 0;
             wonGames = 0;
