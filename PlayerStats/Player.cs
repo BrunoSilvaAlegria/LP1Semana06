@@ -24,18 +24,37 @@ namespace PlayerStats
 
             set
             {
-                highScore = value;
-                if (value < highScore)
+                if (Score(value))
                 {
-                    highScore = value;
+                    highScore = value; //Changes the high score
                 }
             }
         }
 
+        //Helping method for HighScore
+        //Sees if the score given is greater than the current high score
+        private bool Score(float score) => score > highScore; 
+                
         public string Name { get; } //Gets the name of the player
 
         //Gets the percentage of games won by that player
-        public float WinRate => ((float)wonGames/playedGames) * 100; 
+        public float WinRate
+        {
+            get
+            {
+                float winRate = 0;
+
+                if (playedGames == 0)
+                {
+                    winRate = 0;
+                }
+                else
+                {   //Gets the percentage of (wonGames / playedGames)
+                    winRate = (float)wonGames / playedGames;
+                }
+                return winRate;
+            }
+        } 
 
         /// <summary>
         /// Increments 
