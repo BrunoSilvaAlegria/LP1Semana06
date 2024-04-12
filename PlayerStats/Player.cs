@@ -46,7 +46,7 @@ namespace PlayerStats
             {
                 float winRate = 0; //Support variable
 
-                if (playedGames == 0) //If the player hasn't played any games
+                if (playedGames <= 0) //If the player hasn't played any games
                 {
                     winRate = 0; 
                 }
